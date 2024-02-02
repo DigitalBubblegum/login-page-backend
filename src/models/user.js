@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
     username:String,
     email:String,
-    password:String
+    passwordHash:String
 })
 userSchema.set('toJSON',{
     transform: (document, returnedObject) => {
