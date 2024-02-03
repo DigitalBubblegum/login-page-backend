@@ -9,7 +9,7 @@ signupRouter.post('/',async(req,res) =>{
     const {username,email,password} = req.body
     const saltRounds = 10
     const passwordHash = await bcrypt.hash(password,saltRounds)
-    console.log(passwordHash)
+    // console.log(passwordHash)
     const user = new User({
         username,
         email,
